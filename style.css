@@ -31,12 +31,21 @@ img {
 
 a {
   color: #ffffff;
+  text-decoration: none;
 }
 
 .line--green {
   background-color: #1fcca4;
 }
 
+.line--green:hover {
+  background-color: #1cbb96;
+}
+
 .line--blue {
   background-color: #0197f6;
+}
+
+.line--blue:hover {
+  background-color: #0090e9;
 }
