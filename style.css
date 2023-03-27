@@ -14,7 +14,6 @@ body {
   width: 320px;
   display: block;
   text-align: center;
-  color: #ffffff;
   background-color: #283e50;
   border-radius: 6px 6px 0 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -29,6 +28,7 @@ img {
 
 h1 {
   font-family: 'Lobster', cursive;
+  color: #ffffff;
   font-weight: normal;
   font-size: 40px;
   margin-bottom: 0;
@@ -38,6 +38,7 @@ h1 {
 p {
   line-height: 1.4;
   padding: 10.1px;
+  color: #ffffff;
 }
 
 .footer {
