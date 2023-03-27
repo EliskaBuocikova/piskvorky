@@ -76,22 +76,45 @@ a {
   max-width: 80vmin;
 }
 
+.panel {
+  display: flex;
+  justify-content: space-between;
+}
+
 .player {
+  display: flex;
+}
+
+.player__title {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   color: white;
 }
 
-.circle {
+.player__circle {
   border: 3px solid white;
   height: 25px;
   width: 25px;
   border-radius: 25px;
 }
 
+.navigation {
+  display: flex;
+}
+
+.square {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .field {
   border: 1.5px solid black;
   height: 50px;
   width: 50px;
+  flex: calc()
+}
+
+.panel {
+  display: flex;
 }
