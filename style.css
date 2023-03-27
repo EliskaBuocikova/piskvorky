@@ -112,7 +112,7 @@ a {
   border: 1.5px solid black;
   height: 50px;
   width: 50px;
-  flex: calc()
+  flex-basis: 10%;
 }
 
 .panel {
