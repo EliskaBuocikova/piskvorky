@@ -13,7 +13,6 @@ body {
 .content {
   width: 320px;
   display: block;
-  text-align: center;
   background-color: #283e50;
   border-radius: 6px 6px 0 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -29,6 +28,7 @@ img {
 h1 {
   font-family: 'Lobster', cursive;
   color: #ffffff;
+  text-align: center;
   font-weight: normal;
   font-size: 40px;
   margin-bottom: 0;
@@ -39,11 +39,13 @@ p {
   line-height: 1.4;
   padding: 10.1px;
   color: #ffffff;
+  text-align: center;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .line {
@@ -117,4 +119,10 @@ a {
 
 .panel {
   display: flex;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.hra {
+  margin: 0 auto;
 }
