@@ -76,11 +76,15 @@ a {
 
 .hra {
   max-width: 80vmin;
+  margin: 0 auto;
 }
 
 .panel {
   display: flex;
   justify-content: space-between;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .player {
@@ -108,21 +112,18 @@ a {
 .square {
   display: flex;
   flex-wrap: wrap;
+  border: 0.5px solid black;
 }
 
-.field {
-  border: 1.5px solid black;
-  height: 50px;
+button {
+  border: 0.5px solid black;
+  aspect-ratio: 1/1;
   width: 50px;
   flex-basis: 10%;
+  opacity: 0.5;
 }
 
-.panel {
-  display: flex;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
-.hra {
-  margin: 0 auto;
+button:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
