@@ -89,10 +89,12 @@ a {
 
 .player {
   display: flex;
+  align-items: center;
 }
 
 .player__title {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
   color: white;
@@ -100,13 +102,36 @@ a {
 
 .player__circle {
   border: 3px solid white;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   border-radius: 25px;
+  margin-left: 3px;
 }
 
 .navigation {
   display: flex;
+}
+
+.navigation__field {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.navigation__field--green {
+  background-color: #1fcca4;
+  margin-right: 7px;
+}
+
+.navigation__field--green:hover {
+  background-color: #1cbb96;
+}
+
+.navigation__field--blue {
+  background-color: #0197f6;
+}
+
+.navigation__field--blue:hover {
+  background-color: #0090e9;
 }
 
 .square {
