@@ -82,7 +82,6 @@ a {
 .panel {
   display: flex;
   justify-content: space-between;
-  display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
 }
