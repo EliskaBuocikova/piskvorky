@@ -76,7 +76,11 @@ a {
 
 .hra {
   max-width: 80vmin;
-  margin: 2vh auto;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0;
 }
 
 .panel {
