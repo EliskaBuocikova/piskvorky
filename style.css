@@ -17,7 +17,7 @@ body {
   border-radius: 6px 6px 0 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14.5px;
-  margin: 4rem auto;
+  margin: 3vh auto;
 }
 
 img {
@@ -76,7 +76,7 @@ a {
 
 .hra {
   max-width: 80vmin;
-  margin: 0 auto;
+  margin: 2vh auto;
 }
 
 .panel {
@@ -105,7 +105,7 @@ a {
   height: 20px;
   width: 20px;
   border-radius: 25px;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 
 .navigation {
