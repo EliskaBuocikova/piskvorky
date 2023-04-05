@@ -13,7 +13,14 @@ const button10 = document.querySelector('button:nth-child(10)');
 
 const playedOut = (event) => {
   const move = event.target.classList;
-  move.value = 'board__field--circle';
+  if (currentPlayer === 'circle') {
+    move.value = 'board__field--circle';
+    currentPlayer = 'cross';
+  } else {
+    currentPlayer === 'cross';
+    move.value = 'board__field--cross';
+    currentPlayer = 'circle';
+  }
 };
 
 button1.addEventListener('click', playedOut);
