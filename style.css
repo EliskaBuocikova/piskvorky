@@ -156,3 +156,19 @@ button:focus {
   opacity: 0.7;
   cursor: pointer;
 }
+
+/* ---------------------- */
+
+.board__field--circle {
+  background-image: url("circle.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.board__field--cross {
+  background-image: url("cross.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
