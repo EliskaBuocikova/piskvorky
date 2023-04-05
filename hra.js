@@ -11,6 +11,11 @@ const button8 = document.querySelector('button:nth-child(8)');
 const button9 = document.querySelector('button:nth-child(9)');
 const button10 = document.querySelector('button:nth-child(10)');
 
+const playedOut = (event) => {
+  const move = event.target.classList;
+  move.value = 'board__field--circle';
+};
+
 button1.addEventListener('click', playedOut);
 button2.addEventListener('click', playedOut);
 button3.addEventListener('click', playedOut);
