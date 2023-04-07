@@ -1,5 +1,11 @@
 let currentPlayer = 'circle';
 
+const playerIcon = document.querySelector('img');
+
+if (currentPlayer === 'circle') {
+  playerIcon.src = 'circle.svg';
+}
+
 const button1 = document.querySelector('button:nth-child(1)');
 const button2 = document.querySelector('button:nth-child(2)');
 const button3 = document.querySelector('button:nth-child(3)');
@@ -16,10 +22,12 @@ const playedOut = (event) => {
   if (currentPlayer === 'circle') {
     move.value = 'board__field--circle';
     currentPlayer = 'cross';
+    playerIcon.src = 'cross.svg';
   } else {
     currentPlayer === 'cross';
     move.value = 'board__field--cross';
     currentPlayer = 'circle';
+    playerIcon.src = 'circle.svg';
   }
 };
 

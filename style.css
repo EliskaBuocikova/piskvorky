@@ -101,15 +101,16 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   color: white;
+  margin-right: 5px;
 }
 
-.player__circle {
+/* .player__icon {
   border: 3px solid white;
   height: 20px;
   width: 20px;
   border-radius: 25px;
   margin-left: 5px;
-}
+} */
 
 .navigation {
   display: flex;
@@ -171,4 +172,10 @@ button:focus {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.player__icon {
+  filter: invert(100%);
+  height: 23px;
+  width: 23px;
 }
