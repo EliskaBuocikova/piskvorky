@@ -42,3 +42,14 @@ button7.addEventListener('click', playedOut);
 button8.addEventListener('click', playedOut);
 button9.addEventListener('click', playedOut);
 button10.addEventListener('click', playedOut);
+
+const navigationFieldBlue = document.querySelector('.navigation__field--blue');
+
+const verification = (event) => {
+  const restart = confirm('Opravdu chceš začít novou hru?');
+  if (!restart) {
+    event.preventDefault();
+  }
+};
+
+navigationFieldBlue.addEventListener('click', verification);
