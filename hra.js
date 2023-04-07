@@ -19,6 +19,7 @@ const button10 = document.querySelector('button:nth-child(10)');
 
 const playedOut = (event) => {
   const move = event.target.classList;
+  event.target.disabled = 'true';
   if (currentPlayer === 'circle') {
     move.value = 'board__field--circle';
     currentPlayer = 'cross';
