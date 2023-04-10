@@ -160,11 +160,26 @@ button:focus {
 
 /* ---------------------- */
 
+@keyframes zoom-in {
+  from {
+    transform: scale(0);
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  to {
+    transform: scale(1);
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
 .board__field--circle {
   background-image: url("circle.svg");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
+  animation: zoom-in 0.15s ease-in-out;
 }
 
 .board__field--cross {
@@ -172,6 +187,7 @@ button:focus {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
+  animation: zoom-in 0.15s ease-in-out;
 }
 
 .player__icon {
