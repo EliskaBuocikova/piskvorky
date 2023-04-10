@@ -180,6 +180,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
   animation: zoom-in 0.15s ease-in-out;
+  opacity: 100%;
 }
 
 .board__field--cross {
@@ -188,6 +189,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
   animation: zoom-in 0.15s ease-in-out;
+  opacity: 100%;
 }
 
 .player__icon {
