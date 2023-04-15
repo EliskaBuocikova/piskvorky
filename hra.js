@@ -33,7 +33,12 @@ const playedOut = (event) => {
       return '_';
     }
   });
-  console.log(squareForFindWinner);
+  const winner = findWinner(squareForFindWinner);
+  if (winner === 'o') {
+    alert('Tuto hru vyhrál hráč se symbolem 🔴!🏅');
+  } else if (winner === 'x') {
+    alert('Tuto hru vyhrál hráč se symbolem ❌!🏅');
+  }
 };
 
 buttons.forEach((button) => {
