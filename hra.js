@@ -1,3 +1,5 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
 let currentPlayer = 'circle';
 
 const playerIcon = document.querySelector('img');
@@ -21,6 +23,17 @@ const playedOut = (event) => {
     currentPlayer = 'circle';
     playerIcon.src = 'circle.svg';
   }
+  const convertedSquare = Array.from(buttons);
+  const squareForFindWinner = convertedSquare.map((button) => {
+    if (button.classList.contains('board__field--circle')) {
+      return 'o';
+    } else if (button.classList.contains('board__field--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
+  console.log(squareForFindWinner);
 };
 
 buttons.forEach((button) => {
