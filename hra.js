@@ -36,8 +36,10 @@ const playedOut = (event) => {
   const winner = findWinner(squareForFindWinner);
   if (winner === 'o') {
     alert('Tuto hru vyhrál hráč se symbolem 🔴!🏅');
+    location.reload();
   } else if (winner === 'x') {
     alert('Tuto hru vyhrál hráč se symbolem ❌!🏅');
+    location.reload();
   }
 };
 
