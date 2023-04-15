@@ -35,11 +35,15 @@ const playedOut = (event) => {
   });
   const winner = findWinner(squareForFindWinner);
   if (winner === 'o') {
-    alert('Tuto hru vyhrál hráč se symbolem 🔴!🏅');
-    location.reload();
+    setTimeout(() => {
+      alert('Tuto hru vyhrál hráč se symbolem 🔴!🏅');
+      location.reload();
+    }, 220);
   } else if (winner === 'x') {
-    alert('Tuto hru vyhrál hráč se symbolem ❌!🏅');
-    location.reload();
+    setTimeout(() => {
+      alert('Tuto hru vyhrál hráč se symbolem ❌!🏅');
+      location.reload();
+    }, 220);
   }
 };
 
