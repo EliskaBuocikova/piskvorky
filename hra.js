@@ -36,17 +36,17 @@ const playedOut = (event) => {
   const winner = findWinner(squareForFindWinner);
   if (winner === 'o') {
     setTimeout(() => {
-      alert('Vyhrál hráč se symbolem 🔴!🍾🏅🎉');
+      alert(`Vyhrál hráč se symbolem ${winner} !🍾🏅🎉..`);
       location.reload();
     }, 220);
   } else if (winner === 'x') {
     setTimeout(() => {
-      alert('Vyhrál hráč se symbolem ❌!🍾🏅🎉');
+      alert(`Vyhrál hráč se symbolem ${winner} !🍾🏅🎉..`);
       location.reload();
     }, 220);
   } else if (winner === 'tie') {
     setTimeout(() => {
-      alert('Tahle hra je nerozhodně! 🤷');
+      alert('Tahle hra je nerozhodně! 🤷..');
       location.reload();
     }, 220);
   }
