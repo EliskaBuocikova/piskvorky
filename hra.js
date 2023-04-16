@@ -34,12 +34,7 @@ const playedOut = (event) => {
     }
   });
   const winner = findWinner(squareForFindWinner);
-  if (winner === 'o') {
-    setTimeout(() => {
-      alert(`Vyhrál hráč se symbolem ${winner} !🍾🏅🎉..`);
-      location.reload();
-    }, 220);
-  } else if (winner === 'x') {
+  if (winner === 'o' || winner === 'x') {
     setTimeout(() => {
       alert(`Vyhrál hráč se symbolem ${winner} !🍾🏅🎉..`);
       location.reload();
