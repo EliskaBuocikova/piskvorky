@@ -34,6 +34,21 @@ const playedOut = (event) => {
     }
   });
 
+  buttons.forEach((button) => {
+    button.disabled = true;
+  });
+
+  const makeEmptyButtonsAvailable = () => {
+    buttons.forEach((button) => {
+      if (
+        !button.classList.contains('board__field--circle') &&
+        !button.classList.contains('board__field--cross')
+      ) {
+        button.disabled = false;
+      }
+    });
+  };
+
   fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
     method: 'POST',
     headers: {
@@ -46,6 +61,7 @@ const playedOut = (event) => {
   })
     .then((response) => response.json())
     .then((data) => {
+      makeEmptyButtonsAvailable();
       if (currentPlayer === 'cross') {
         const { x, y } = data.position;
         const button = buttons[x + y * 10];
