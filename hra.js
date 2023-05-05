@@ -33,6 +33,26 @@ const playedOut = (event) => {
       return '_';
     }
   });
+
+  fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      board: squareForFindWinner,
+      player: 'x',
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (currentPlayer === 'cross') {
+        const { x, y } = data.position;
+        const button = buttons[x + y * 10];
+        button.click(); // simulace kliknutí myší na políčko
+      }
+    });
+
   const winner = findWinner(squareForFindWinner);
   if (winner === 'o' || winner === 'x') {
     setTimeout(() => {
