@@ -1,5 +1,6 @@
 import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
+//nastavení výchozího stavu hry:
 let currentPlayer = 'circle';
 
 const playerIcon = document.querySelector('img');
@@ -10,6 +11,7 @@ if (currentPlayer === 'circle') {
 
 const buttons = document.querySelectorAll('button');
 
+// znepřístupnění již odehraných políček, přidávání koleček a křížků na odehraná políčka, předávání tahu druhému hráči a měnění zobrazení hráče, který je na tahu:
 const playedOut = (event) => {
   const move = event.target.classList;
   event.target.disabled = 'true';
@@ -23,6 +25,8 @@ const playedOut = (event) => {
     currentPlayer = 'circle';
     playerIcon.src = 'circle.svg';
   }
+
+  // vytvoření pole:
   const convertedSquare = Array.from(buttons);
   const squareForFindWinner = convertedSquare.map((button) => {
     if (button.classList.contains('board__field--circle')) {
@@ -34,10 +38,12 @@ const playedOut = (event) => {
     }
   });
 
+  // znepřístupnění políček v průběhu čekání na odehrání tahu umělou inteligencí:
   buttons.forEach((button) => {
     button.disabled = true;
   });
 
+  // funkce pro zpřístupnění prázdných políček:
   const makeEmptyButtonsAvailable = () => {
     buttons.forEach((button) => {
       if (
@@ -49,6 +55,7 @@ const playedOut = (event) => {
     });
   };
 
+  // přidání umělé inteligence k odehrání tahu za hráče s křížkem:
   fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
     method: 'POST',
     headers: {
@@ -61,7 +68,7 @@ const playedOut = (event) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      makeEmptyButtonsAvailable();
+      makeEmptyButtonsAvailable(); // volání funkce pro zpřístupnění prázdných políček
       if (currentPlayer === 'cross') {
         const { x, y } = data.position;
         const button = buttons[x + y * 10];
@@ -69,6 +76,7 @@ const playedOut = (event) => {
       }
     });
 
+  // informace o vítězovi hry:
   const winner = findWinner(squareForFindWinner);
   if (winner === 'o' || winner === 'x') {
     setTimeout(() => {
@@ -83,10 +91,12 @@ const playedOut = (event) => {
   }
 };
 
+// spuštění funkce playedOut na kliknutí:
 buttons.forEach((button) => {
   button.addEventListener('click', playedOut);
 });
 
+// ověření, zda chce uživatel restartovat hru:
 const navigationFieldBlue = document.querySelector('.navigation__field--blue');
 
 const verification = (event) => {
